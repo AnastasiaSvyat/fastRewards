@@ -3,15 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import firebase from "firebase/app";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const firebaseConfig = {
+  apiKey: "AIzaSyAEUDQdQCdkkONNEVcrEoBHk7aaaXEsaS0",
+  authDomain: "fastrewardsnew.firebaseapp.com",
+  projectId: "fastrewardsnew",
+  storageBucket: "fastrewardsnew.appspot.com",
+  messagingSenderId: "813032466791",
+  appId: "1:813032466791:web:5feced4a416d20533827c2",
+  measurementId: "G-8VP2KBZHBX"
+};
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+ReactDOM.render(<App />,document.getElementById('root'));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
